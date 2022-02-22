@@ -54,8 +54,5 @@ async def uzb(message: types.Message):
         await message.reply("Til o`zgardi", reply_markup=kb.mainmenu)
 
 
-    
-
-
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
