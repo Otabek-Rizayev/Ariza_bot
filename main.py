@@ -5,8 +5,10 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher import FSMContext
 from aiogram.types import InputFile
 import keyboards as kb
-API_TOKEN = '5298296446:AAGFKafrZjHBT-6mzT0PVeh3PrF3xUejap0'
-#5156800116:AAFmF0RALm3ZYCGqHhWsYnnJvJSDXZXEyhM
+API_TOKEN = '5156800116:AAFmF0RALm3ZYCGqHhWsYnnJvJSDXZXEyhM'
+#
+#5298296446:AAGFKafrZjHBT-6mzT0PVeh3PrF3xUejap0 text
+
 logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=API_TOKEN)
