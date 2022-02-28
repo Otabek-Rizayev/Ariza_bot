@@ -1,21 +1,24 @@
 import logging
 from aiogram import Bot, Dispatcher, executor, types
-from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher import FSMContext
-from aiogram.types import InputFile
+from aiogram.types import ParseMode
+from aiogram.utils import executor
+from aiogram.dispatcher.filters import Text
+#from loader import dp, bot
 import keyboards as kb
+from states import Form
+#from config import CHANNELS
 API_TOKEN = '5156800116:AAFmF0RALm3ZYCGqHhWsYnnJvJSDXZXEyhM'
-#
-#5298296446:AAGFKafrZjHBT-6mzT0PVeh3PrF3xUejap0 text
+
 
 logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
-#storage = MemoryStorage()
-#dp = Dispatcher(bot, storage=storage)
+storage = MemoryStorage()
+dp = Dispatcher(bot, storage=storage)
 
 
 @dp.message_handler(commands=['start'])
@@ -23,6 +26,66 @@ async def send_welcome(message: types.Message):
     await message.reply("Савдо-Саноат палатаси Тошкент вилояти Худудий бошқармасига хуш келибсиз", reply_markup=kb.mainmenu)
 
 
+@dp.message_handler(text_startswith='✅ Хизмат турлари', state=None)
+async def start(msg: types.Message):
+    await msg.answer("Иш турини танланг:", reply_markup=kb.ish)
+    await Form.ish.set()
+
+
+@dp.message_handler(lambda message: message.text not in ["✅ Хизмат турлари", "Юридик масалалар", "Экспортга кўмаклашиш", "Кўргазма", "Бизнес режа тайёрлаш"], state=Form.ish)
+async def ish_invalid(message: types.Message):
+    return await message.reply("Кнопкадан танланг!")
+
+@dp.message_handler(state='*', text_startswith='🔙 Орқага')
+@dp.message_handler(Text(equals='cancel', ignore_case=True), state='*')
+async def cancel_handler(message: types.Message, state: FSMContext):
+    current_state = await state.get_state()
+    if current_state is None:
+        return
+
+    logging.info('Cancelling state %r', current_state)
+    await state.finish()
+    await message.reply('Ариза бекор қилинди!', reply_markup=kb.mainmenu)
+
+@dp.message_handler(state=Form.ish)
+async def ish(msg: types.Message, state:FSMContext):
+    ish=msg.text
+    await state.update_data({'ish':ish})
+    
+    await msg.answer("Исмингизни киритинг:", reply_markup=kb.Main)
+    await Form.next()
+
+@dp.message_handler(state=Form.ism)
+async def ism(msg: types.Message, state:FSMContext):
+    ism=msg.text
+    await state.update_data({'ism':ism})
+
+    await msg.answer("Фирмангизни тўлик номи ва ИНН(STIR)сини киритинг:", reply_markup=kb.Main)
+    await Form.next()
+
+@dp.message_handler(state=Form.inn)
+async def inn(msg: types.Message, state:FSMContext):
+    inn=msg.text
+    await state.update_data({'inn':inn})
+
+    await msg.answer("Телефон рақамингизни киритинг:", reply_markup=kb.Main)
+    await Form.next()
+
+@dp.message_handler(state=Form.tel)
+async def tel(msg: types.Message, state:FSMContext):
+    tel=msg.text
+    await state.update_data({'tel':tel})
+    data = await state.get_data()
+    xabar = f"Tanlangan xizmat: {data['ish']}\n"\
+            f"Ismi: {data['ism']}\n"\
+            f"Inn raqami: {data['inn']}\n"\
+            f"Telefon raqami: {data['tel']}\n"
+    await bot.send_message(chat_id=-1001746692435, text=f"<b>{xabar}</b>")
+    await msg.answer("Аризангиз қабул қилинди тез орада алоқага чиқилади!", reply_markup=kb.mainmenu)
+    await state.finish()
+
+
+    
 @dp.message_handler()
 async def uzb(message: types.Message):
     if message.text == "✅ Хизмат турлари":
@@ -55,7 +118,7 @@ async def uzb(message: types.Message):
                                 "мурожат учун тел: ( 95 ) 202-16-16", reply_markup=kb.ish)
     if message.text == "Экспортга кўмаклашиш":
         try:
-            await message.reply_photo("https://t.me/rasmlarpalata/20")
+            await message.reply_photo("https://t.me/rasmlarpalata/25")
         except:
             await message.reply("Rasm o'chirib tashlangan...")
         await message.answer("💥Экспортга кўмаклашиш ва инвестициялар жалб қилиш сектори\n"
@@ -109,6 +172,8 @@ async def uzb(message: types.Message):
                             "Тел:95 202-21-21 Қабул хона",reply_markup=kb.Main2)
     if message.text == "🇷🇺Рус-Rus/🇺🇿Узб-Uzb":
         await message.reply("Тил ўзгарди", reply_markup=kb.mainmenu)
+
+
 
 
 if __name__ == '__main__':
