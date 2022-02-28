@@ -5,10 +5,9 @@ from aiogram.dispatcher import FSMContext
 from aiogram.types import ParseMode
 from aiogram.utils import executor
 from aiogram.dispatcher.filters import Text
-#from loader import dp, bot
 import keyboards as kb
 from states import Form
-#from config import CHANNELS
+
 API_TOKEN = '5156800116:AAFmF0RALm3ZYCGqHhWsYnnJvJSDXZXEyhM'
 
 
@@ -33,8 +32,16 @@ async def start(msg: types.Message):
 
 
 @dp.message_handler(lambda message: message.text not in ["✅ Хизмат турлари", "Юридик масалалар", "Экспортга кўмаклашиш", "Кўргазма", "Бизнес режа тайёрлаш"], state=Form.ish)
-async def ish_invalid(message: types.Message):
-    return await message.reply("Кнопкадан танланг!")
+async def ish_invalid(message: types.Message, state: FSMContext):
+    
+    if message.text == "🔙 Орқага":
+        await state.finish()
+        await message.answer("Бош саҳифа", reply_markup=kb.mainmenu)
+    else:
+        return await message.reply("Кнопкадан танланг!")
+        
+     
+    
 
 @dp.message_handler(state='*', text_startswith='🔙 Орқага')
 @dp.message_handler(Text(equals='cancel', ignore_case=True), state='*')
@@ -76,16 +83,15 @@ async def tel(msg: types.Message, state:FSMContext):
     tel=msg.text
     await state.update_data({'tel':tel})
     data = await state.get_data()
-    xabar = f"Tanlangan xizmat: {data['ish']}\n"\
-            f"Ismi: {data['ism']}\n"\
-            f"Inn raqami: {data['inn']}\n"\
-            f"Telefon raqami: {data['tel']}\n"
-    await bot.send_message(chat_id=-1001746692435, text=f"<b>{xabar}</b>")
+    xabar = f"Хизмат тури: {data['ish']}\n"\
+            f"Исми: {data['ism']}\n"\
+            f"Инн рақами: {data['inn']}\n"\
+            f"Телефон рақами: {data['tel']}\n"
+    await bot.send_message(chat_id=-1001746692435, text=f"<b> {xabar} </b>")
     await msg.answer("Аризангиз қабул қилинди тез орада алоқага чиқилади!", reply_markup=kb.mainmenu)
     await state.finish()
 
 
-    
 @dp.message_handler()
 async def uzb(message: types.Message):
     if message.text == "✅ Хизмат турлари":
@@ -152,7 +158,7 @@ async def uzb(message: types.Message):
                             "Ш.Руставели кўч. 22-уй ИНДЕКС 10070\n"
                             "STIR: 201 806 983   OKED 94110\n"
                             "Тел: 95 202-16-16 Юридик сектор\n"
-                            "Тел:95 202-21-21 Қабул хона",reply_markup=kb.Main)
+                            "Тел:95 202-21-21 Қабул хона",reply_markup=kb.mainmenu)
     if message.text == "🇺🇿Узб-Uzb/🇷🇺Рус-Rus":
         await message.reply("Язык изменился")
         await message.answer("Добро пожаловать в Ташкентское региональное отделение Торгово-промышленной палаты", reply_markup=kb.mainmenu2)
@@ -169,12 +175,9 @@ async def uzb(message: types.Message):
                             "Ш.Руставели кўч. 22-уй ИНДЕКС 10070\n"
                             "STIR: 201 806 983   OKED 94110\n"
                             "Тел: 95 202-16-16 Юридик сектор\n"
-                            "Тел:95 202-21-21 Қабул хона",reply_markup=kb.Main2)
+                            "Тел:95 202-21-21 Қабул хона",reply_markup=kb.mainmenu2)
     if message.text == "🇷🇺Рус-Rus/🇺🇿Узб-Uzb":
         await message.reply("Тил ўзгарди", reply_markup=kb.mainmenu)
-
-
-
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
