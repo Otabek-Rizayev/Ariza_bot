@@ -128,24 +128,32 @@ async def ism(msg: types.Message, state:FSMContext):
     ism=msg.text
     await state.update_data({'ism':ism})
 
-    await msg.answer("Фирмангизни тўлик номи ва (STIR)ИННсини киритинг:", reply_markup=kb.Main)
+    await msg.answer("(STIR)ИНН рақамини киритинг:", reply_markup=kb.Main)
     await Form.next()
 
 @dp.message_handler(lambda message: not len(message.text) == 9, state=Form.inn)
 async def inn_invalid(message: types.Message):
-    return await message.reply("(STIR)ИНН рақам нотўғри киритилди!\n")
+    return await message.reply("(STIR)ИНН рақами нотўғри киритилди!\n")
 
 @dp.message_handler(lambda message: message.text.isdigit(), state=Form.inn)
 async def inn(msg: types.Message, state:FSMContext):
     inn=msg.text
     await state.update_data({'inn':inn})
 
+    await msg.answer("Фирмангизни тўлик номини киритинг:", reply_markup=kb.Main)
+    await Form.next()
+
+@dp.message_handler(state=Form.firma)
+async def firma(msg: types.Message, state:FSMContext):
+    firma=msg.text
+    await state.update_data({'firma':firma})
+
     await msg.answer("Телефон рақамингизни киритинг:", reply_markup=kb.Main)
     await Form.next()
 
 @dp.message_handler(lambda message: not message.text.isdigit(), state=Form.tel)
 async def tel_invalid(message: types.Message):
-    return await message.reply("Телефон рақам нотўғри киритилди!")
+    return await message.reply("Телефон рақами нотўғри киритилди!")
 
 @dp.message_handler(lambda message: message.text.isdigit(), state=Form.tel)
 async def tel(msg: types.Message, state:FSMContext):
@@ -156,6 +164,7 @@ async def tel(msg: types.Message, state:FSMContext):
     xabar = f"Хизмат тури: {data['ish']}\n"\
             f"Исми: {data['ism']}\n"\
             f"Инн рақами: {data['inn']}\n"\
+            f"Фирма номи: {data['firma']}\n"\
             f"Телефон рақами: {data['tel']}\n"
     await bot.send_message(chat_id=-1001746692435, text=f"{xabar}")
     await msg.answer("✅ Аризангиз қабул қилинди, тез орада алоқага чиқилади", reply_markup=kb.mainmenu)

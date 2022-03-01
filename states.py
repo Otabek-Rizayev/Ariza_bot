@@ -4,5 +4,6 @@ class Form(StatesGroup):
     ish = State()
     ism = State()
     inn = State()
+    firma = State()
     tel = State()
     
