@@ -100,7 +100,7 @@ async def ish(msg: types.Message, state:FSMContext):
                             "💥Асбоб-ускуналар излаш ва уларни харид қилишга кўмаклашиш ва шартнома тузишга ёрдамлашиш бўйича тадбиркорлар сони - 833 🤝🌍\n\n")
     if ish == "Бизнес режа тайёрлаш":
         try:
-            await msg.reply_photo("https://t.me/rasmlarpalata/25")
+            await msg.reply_photo("https://t.me/rasmlarpalata/28")
         except:
             await msg.reply("Rasm o'chirib tashlangan...")
         await msg.answer("📊Хусусий тадбиркорликни ривожлантиришнинг самарали йўналишларини аниқлаш мақсадида ички ва ташқи бозорни мунтазам ўрганиб бориш; 📈💵💸\n\n"
@@ -128,18 +128,6 @@ async def ism(msg: types.Message, state:FSMContext):
     ism=msg.text
     await state.update_data({'ism':ism})
 
-    await msg.answer("(STIR)ИНН рақамини киритинг:", reply_markup=kb.Main)
-    await Form.next()
-
-@dp.message_handler(lambda message: not len(message.text) == 9, state=Form.inn)
-async def inn_invalid(message: types.Message):
-    return await message.reply("(STIR)ИНН рақами нотўғри киритилди!\n")
-
-@dp.message_handler(lambda message: message.text.isdigit(), state=Form.inn)
-async def inn(msg: types.Message, state:FSMContext):
-    inn=msg.text
-    await state.update_data({'inn':inn})
-
     await msg.answer("Фирмангизни тўлик номини киритинг:", reply_markup=kb.Main)
     await Form.next()
 
@@ -148,7 +136,19 @@ async def firma(msg: types.Message, state:FSMContext):
     firma=msg.text
     await state.update_data({'firma':firma})
 
-    await msg.answer("Телефон рақамингизни киритинг:", reply_markup=kb.Main)
+    await msg.answer("(STIR)ИНН рақамини киритинг:", reply_markup=kb.Main)
+    await Form.next()
+
+@dp.message_handler(lambda message: not len(message.text) == 9, state=Form.inn)
+async def inn_invalid(message: types.Message):
+    return await message.reply("(STIR)ИНН рақами нотўғри киритилди!\n")
+
+@dp.message_handler(lambda message: message.text.isdigit(), state=Form.inn)Телефон рақамингизни киритинг:
+async def inn(msg: types.Message, state:FSMContext):
+    inn=msg.text
+    await state.update_data({'inn':inn})
+
+    await msg.answer("Фирмангизни тўлиқ номини киритинг:", reply_markup=kb.Main)
     await Form.next()
 
 @dp.message_handler(lambda message: not message.text.isdigit(), state=Form.tel)
