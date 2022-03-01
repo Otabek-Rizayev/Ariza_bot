@@ -143,12 +143,12 @@ async def firma(msg: types.Message, state:FSMContext):
 async def inn_invalid(message: types.Message):
     return await message.reply("(STIR)ИНН рақами нотўғри киритилди!\n")
 
-@dp.message_handler(lambda message: message.text.isdigit(), state=Form.inn)Телефон рақамингизни киритинг:
+@dp.message_handler(lambda message: message.text.isdigit(), state=Form.inn)
 async def inn(msg: types.Message, state:FSMContext):
     inn=msg.text
     await state.update_data({'inn':inn})
 
-    await msg.answer("Фирмангизни тўлиқ номини киритинг:", reply_markup=kb.Main)
+    await msg.answer("Телефон рақамингизни киритинг:", reply_markup=kb.Main)
     await Form.next()
 
 @dp.message_handler(lambda message: not message.text.isdigit(), state=Form.tel)
