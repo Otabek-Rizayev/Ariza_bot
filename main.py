@@ -55,7 +55,7 @@ async def ish(msg: types.Message, state:FSMContext):
     ish=msg.text
     if ish == "Юридик масалалар":
         try:
-            await msg.reply_photo("https://t.me/rasmlarpalata/22")
+            await msg.reply_photo("https://t.me/c/1746692435/51")
         except:
             await msg.answer("Rasm o'chirib tashlangan...")
         await msg.answer("Тадбиркорлик субъектлари ҳуқуқларини ҳимоя қилиш сектори қуйидаги асосий йўналишлар бўйича фаолияти юритилишида бошчилик қилади:\n\n"
@@ -81,7 +81,7 @@ async def ish(msg: types.Message, state:FSMContext):
                                 "мурожат учун тел: ( 95 ) 202-16-16")
     if ish == "Экспортга кўмаклашиш":
         try:
-            await msg.reply_photo("https://t.me/rasmlarpalata/25")
+            await msg.reply_photo("https://t.me/c/1746692435/54")
         except:
             await msg.reply("Rasm o'chirib tashlangan...")
         await msg.answer("💥Экспортга кўмаклашиш ва инвестициялар жалб қилиш сектори\n"
@@ -100,7 +100,7 @@ async def ish(msg: types.Message, state:FSMContext):
                             "💥Асбоб-ускуналар излаш ва уларни харид қилишга кўмаклашиш ва шартнома тузишга ёрдамлашиш бўйича тадбиркорлар сони - 833 🤝🌍\n\n")
     if ish == "Бизнес режа тайёрлаш":
         try:
-            await msg.reply_photo("https://t.me/rasmlarpalata/28")
+            await msg.reply_photo("https://t.me/c/1746692435/57")
         except:
             await msg.reply("Rasm o'chirib tashlangan...")
         await msg.answer("📊Хусусий тадбиркорликни ривожлантиришнинг самарали йўналишларини аниқлаш мақсадида ички ва ташқи бозорни мунтазам ўрганиб бориш; 📈💵💸\n\n"
