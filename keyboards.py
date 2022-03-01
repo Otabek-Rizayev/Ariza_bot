@@ -1,9 +1,12 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton
 
+
 btnMain = KeyboardButton("🔙 Орқага")
 Main = ReplyKeyboardMarkup(resize_keyboard=True).add(btnMain)
 
-#ariza = KeyboardButton("📝 Ariza yuborish")
+ar = KeyboardButton("📝 Ариза қолдириш")
+ariza = ReplyKeyboardMarkup(resize_keyboard=True).add(ar).add(btnMain)
+
 xizmat = KeyboardButton("✅ Хизмат турлари")
 biz = KeyboardButton("👤 Биз ҳақимизда")
 uz = KeyboardButton("🇺🇿Узб-Uzb/🇷🇺Рус-Rus")
