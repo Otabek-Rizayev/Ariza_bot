@@ -163,8 +163,8 @@ async def tel(msg: types.Message, state:FSMContext):
     data = await state.get_data()
     xabar = f"Хизмат тури: {data['ish']}\n"\
             f"Исми: {data['ism']}\n"\
-            f"Инн рақами: {data['inn']}\n"\
             f"Фирма номи: {data['firma']}\n"\
+            f"Инн рақами: {data['inn']}\n"\
             f"Телефон рақами: {data['tel']}\n"
     await bot.send_message(chat_id=-1001746692435, text=f"{xabar}")
     await msg.answer("✅ Аризангиз қабул қилинди, тез орада алоқага чиқилади", reply_markup=kb.mainmenu)
