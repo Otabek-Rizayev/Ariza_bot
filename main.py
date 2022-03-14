@@ -124,9 +124,11 @@ async def ish(msg: types.Message, state:FSMContext):
                                 "💥Маҳсулот етказиб бериш бўйича киритилган даъво аризалар сони - 18.000\n\n"
                                 "Ва бошқа мурожат хатлари\n\n"
                                 "мурожат учун тел: ( 95 ) 202-16-16")
-        
-    #await msg.answer("Ариза қолдиришни истайсизми?", reply_markup=kb.ariza)
+
     await state.update_data({'ish':ish})
+    #await msg.answer("Ариза қолдиришни истайсизми?", reply_markup=kb.ariza)
+    #await state.reset_state(with_data = False)
+    #if msg.text == "📝 Ариза қолдириш":
     await msg.answer("Исмингизни киритинг:", reply_markup=kb.Main)
     await Form.next()
 
