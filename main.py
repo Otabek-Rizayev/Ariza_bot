@@ -157,7 +157,7 @@ async def inn(msg: types.Message, state:FSMContext):
     inn=msg.text
     await state.update_data({'inn':inn})
 
-    await msg.answer("Телефон рақамингизни киритинг:", reply_markup=kb.Main)
+    await msg.answer("Телефон рақамингизни тўлиқ киритинг:\nМисол учун: +9989********", reply_markup=kb.Main)
     await Form.next()
 
 @dp.message_handler(lambda message: not len(message.text) == 13, state=Form.tel)
