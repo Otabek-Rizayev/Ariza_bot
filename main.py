@@ -81,7 +81,7 @@ async def ish(msg: types.Message, state:FSMContext):
     
     if ish == "Бизнес режа тайёрлаш":
         try:
-            await msg.reply_photo("https://t.me/rasmlarpalata/28")
+            await msg.reply_photo("https://t.me/rasmlarpalata/37")
         except:
             await msg.reply("Rasm o'chirib tashlangan...")
         await msg.answer("📊Хусусий тадбиркорликни ривожлантиришнинг самарали йўналишларини аниқлаш мақсадида ички ва ташқи бозорни мунтазам ўрганиб бориш; 📈💵💸\n\n"
@@ -100,7 +100,7 @@ async def ish(msg: types.Message, state:FSMContext):
 
     if ish == "Юридик масалалар":
         try:
-            await msg.reply_photo("https://t.me/rasmlarpalata/22")
+            await msg.reply_photo("https://t.me/rasmlarpalata/35")
         except:
             await msg.answer("Rasm o'chirib tashlangan...")
         await msg.answer("Тадбиркорлик субъектлари ҳуқуқларини ҳимоя қилиш сектори қуйидаги асосий йўналишлар бўйича фаолияти юритилишида бошчилик қилади:\n\n"
