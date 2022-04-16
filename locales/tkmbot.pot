@@ -1,0 +1,123 @@
+# Translations template for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-04-16 12:37+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: keyboards.py:7 main.py:52 main.py:58
+msgid "🔙 Орқага"
+msgstr ""
+
+#: keyboards.py:10 main.py:120
+msgid "📝 Ариза қолдириш"
+msgstr ""
+
+#: keyboards.py:13 main.py:45
+msgid "✅ Хизмат турлари"
+msgstr ""
+
+#: keyboards.py:14
+msgid "👤 Биз ҳақимизда"
+msgstr ""
+
+#: keyboards.py:18
+msgid "Экспортга кўмаклашиш"
+msgstr ""
+
+#: keyboards.py:19
+msgid "Кўргазма"
+msgstr ""
+
+#: keyboards.py:20
+msgid "Бизнес режа тайёрлаш"
+msgstr ""
+
+#: keyboards.py:21
+msgid "Юридик масалалар"
+msgstr ""
+
+#: main.py:18
+msgid ""
+"Савдо-Саноат палатаси Тошкент вилояти Худудий бошқармасининг расмий "
+"ботига хуш келибсиз"
+msgstr ""
+
+#: main.py:23
+msgid "Сизнинг тилингиз: <i>{language}</i>"
+msgstr ""
+
+#: main.py:29
+msgid ""
+"Тилни танланг.\n"
+"Мисол учун: /setlang en"
+msgstr ""
+
+#: main.py:31
+msgid "Бу тил мавжуд эмас!"
+msgstr ""
+
+#: main.py:34
+msgid "Тил созланди"
+msgstr ""
+
+#: main.py:47
+msgid "Иш турини танланг:"
+msgstr ""
+
+#: main.py:54
+msgid "Бош саҳифа"
+msgstr ""
+
+#: main.py:56
+msgid "Кнопкадан танланг!"
+msgstr ""
+
+#: main.py:68
+msgid "Ариза бекор қилинди!"
+msgstr ""
+
+#: main.py:114
+msgid "Ариза қолдиришни истайсизми?"
+msgstr ""
+
+#: main.py:121
+msgid "Исмингизни киритинг:"
+msgstr ""
+
+#: main.py:128
+msgid "Фирмангизни тўлик номини киритинг:"
+msgstr ""
+
+#: main.py:135
+msgid "(STIR)ИНН рақамини киритинг:"
+msgstr ""
+
+#: main.py:140
+msgid "(STIR)ИНН рақами нотўғри киритилди!"
+msgstr ""
+
+#: main.py:146
+msgid "Телефон рақамингизни тўлиқ киритинг: Мисол учун: +9989********"
+msgstr ""
+
+#: main.py:151
+msgid "Телефон рақами нотўғри киритилди! Илтимос рақамни тўлиқ киритинг"
+msgstr ""
+
+#: main.py:170
+msgid "✅ Аризангиз қабул қилинди, тез орада алоқага чиқилади"
+msgstr ""
+
