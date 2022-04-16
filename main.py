@@ -160,7 +160,7 @@ async def tel(msg: types.Message, state:FSMContext):
     data = await state.get_data()
     count += 1
 
-    xabar = (f"Ариза тартиб рақами: <b>{count}</b>\n"
+    xabar = (f"№: <b>{count}</b>\n"
             f"Хизмат тури: <b>{data['ish']}</b>\n"
             f"Исми: <b>{data['ism']}</b>\n"
             f"Фирма номи: <b>{data['firma']}</b>\n"
