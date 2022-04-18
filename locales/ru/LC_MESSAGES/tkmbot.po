@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-04-16 12:37+0500\n"
-"PO-Revision-Date: 2022-04-16 12:28+0500\n"
+"POT-Creation-Date: 2022-04-18 15:17+0500\n"
+"PO-Revision-Date: 2022-04-18 11:44+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -19,111 +19,116 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: keyboards.py:7 main.py:52 main.py:58
-msgid "🔙 Орқага"
+#: keyboards.py:7 main.py:49 main.py:55
+msgid "🔙 Back"
 msgstr "🔙 Назад"
 
-#: keyboards.py:10 main.py:120
-msgid "📝 Ариза қолдириш"
+#: keyboards.py:10 main.py:117
+msgid "📝 Leave an application"
 msgstr "📝 Оставьте заявку"
 
-#: keyboards.py:13 main.py:45
-msgid "✅ Хизмат турлари"
+#: keyboards.py:13 main.py:42
+msgid "✅ Types of services"
 msgstr "✅ Виды услуг"
 
 #: keyboards.py:14
-msgid "👤 Биз ҳақимизда"
+msgid "👤 About us"
 msgstr "👤 О нас"
 
+#: keyboards.py:15 main.py:25
+msgid "UZ|РУ|[ENG]"
+msgstr "UZ|[РУ]|ENG"
+
 #: keyboards.py:18
-msgid "Экспортга кўмаклашиш"
+msgid "Export assistance"
 msgstr "Продвижение экспорта"
 
 #: keyboards.py:19
-msgid "Кўргазма"
+msgid "Exhibition"
 msgstr "Выставки"
 
 #: keyboards.py:20
-msgid "Бизнес режа тайёрлаш"
+msgid "Preparation of a business plan"
 msgstr "Бизнес-план"
 
 #: keyboards.py:21
-msgid "Юридик масалалар"
+msgid "Legal issues"
 msgstr "Юридические проблемы"
 
 #: main.py:18
 msgid ""
-"Савдо-Саноат палатаси Тошкент вилояти Худудий бошқармасининг расмий "
-"ботига хуш келибсиз"
+"Welcome to the bot Official of the Tashkent Regional Department of the "
+"Chamber of Commerce and Industry"
 msgstr ""
 "Добро пожаловать в Ташкентское региональное отделение "
 "Торгово-промышленной палаты"
 
 #: main.py:23
-msgid "Сизнинг тилингиз: <i>{language}</i>"
+msgid "Your language: <i>{language}</i>"
 msgstr "Ваш язык: <i>{language}</i>"
 
-#: main.py:29
-msgid ""
-"Тилни танланг.\n"
-"Мисол учун: /setlang en"
-msgstr ""
-"Выберите язык. \n"
-"Например: /setlang en"
-
 #: main.py:31
-msgid "Бу тил мавжуд эмас!"
-msgstr "Этого языка не существует!"
-
-#: main.py:34
-msgid "Тил созланди"
+msgid "Language adjusted"
 msgstr "Язык настроен"
 
-#: main.py:47
-msgid "Иш турини танланг:"
+#: main.py:44
+msgid "Select the type of work:"
 msgstr "Выберите тип работы:"
 
-#: main.py:54
-msgid "Бош саҳифа"
+#: main.py:51
+msgid "Home page"
 msgstr "Домашняя страница"
 
-#: main.py:56
-msgid "Кнопкадан танланг!"
+#: main.py:53
+msgid "Choose from the buttons!"
 msgstr "Выберите с кнопки!"
 
-#: main.py:68
-msgid "Ариза бекор қилинди!"
+#: main.py:65
+msgid "Application canceled!"
 msgstr "Заявка отменена!"
 
-#: main.py:114
-msgid "Ариза қолдиришни истайсизми?"
+#: main.py:111
+msgid "Do you want to leave an application?"
 msgstr "Хотите оставить заявку?"
 
-#: main.py:121
-msgid "Исмингизни киритинг:"
+#: main.py:118
+msgid "Enter your name:"
 msgstr "Введите ваше имя:"
 
-#: main.py:128
-msgid "Фирмангизни тўлик номини киритинг:"
+#: main.py:125
+msgid "Enter the full name of your company:"
 msgstr "Введите полное название вашей компании:"
 
-#: main.py:135
-msgid "(STIR)ИНН рақамини киритинг:"
+#: main.py:132
+msgid "Enter the (STIR)INN number:"
 msgstr "Введите (STIR)ИНН:"
 
-#: main.py:140
-msgid "(STIR)ИНН рақами нотўғри киритилди!"
+#: main.py:137
+msgid "(STIR)INN number entered incorrectly!"
 msgstr "(STIR)ИНН введен неверно!"
 
-#: main.py:146
-msgid "Телефон рақамингизни тўлиқ киритинг: Мисол учун: +9989********"
+#: main.py:143
+msgid "Enter your full phone number: For example: +9989********"
 msgstr "Введите свой полный номер телефона:Например: +9989********"
 
-#: main.py:151
-msgid "Телефон рақами нотўғри киритилди! Илтимос рақамни тўлиқ киритинг"
+#: main.py:148
+msgid "Phone number entered incorrectly! Please enter the full number"
 msgstr "Номер телефона введен неправильно! Пожалуйста, введите полный номер"
 
-#: main.py:170
-msgid "✅ Аризангиз қабул қилинди, тез орада алоқага чиқилади"
+#: main.py:167
+msgid "✅ Your application has been accepted and will be contacted shortly"
 msgstr "✅ Ваша заявка принята, с вами свяжутся в ближайшее время"
+
+#~ msgid "UZ|РУ|[ENG]"
+#~ msgstr "UZ|[РУ]|ENG"
+
+#~ msgid ""
+#~ "Choose a language. \n"
+#~ "For example: /setlang en"
+#~ msgstr ""
+#~ "Выберите язык. \n"
+#~ "Например: /setlang en"
+
+#~ msgid "This language does not exist!"
+#~ msgstr "Этого языка не существует!"
 
