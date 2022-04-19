@@ -2,7 +2,6 @@ import logging
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher import FSMContext
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, ParseMode
 from aiogram.utils import executor
 from aiogram.dispatcher.filters import Text
 import keyboards as kb
@@ -10,6 +9,7 @@ from states import Form
 from loader import dp, bot, _
 from lang import LANGS, LANG_STORAGE, Localization
 from language import lang_text
+from aiogram.types import ReplyKeyboardRemove
 
 logging.basicConfig(level=logging.INFO)
 
@@ -24,14 +24,17 @@ async def cmd_lang(message: types.Message, locale):
 
 @dp.message_handler(text="🇺🇿UZ|🇷🇺RU|🇬🇧ENG")
 async def send_welcome(message: types.Message):
-    await message.answer("🇺🇿 Тилни танланг\n🇷🇺 Выберите язык\n🇬🇧Select a language", reply_markup=kb.til)
+    await message.answer("🇺🇿 Тилни I танланг\n🇷🇺 Выберите язык\n🇬🇧Select a language", reply_markup=kb.til)
 
 @dp.callback_query_handler(text=["🇷🇺 Русский", "🇬🇧 English", "🇺🇿 O'zbekcha"])
 async def lang(query: types.CallbackQuery):
     if query.data in LANGS.keys():
         lang = LANGS.get(query.data)
     LANG_STORAGE[query.from_user.id] = lang
-    await query.answer(text=_("Language adjusted", locale=lang))
+    await query.answer(text=_("Language adjusted ✅", locale=lang), show_alert=True)
+    await query.message.delete()
+    await query.message.answer(_("Click restart /start", locale=lang), reply_markup=kb.mainmenu)
+
 
 @dp.message_handler(text=["👤 Биз ҳақимизда","👤 О нас", "👤 About us"])
 async def sahifa(message: types.Message):

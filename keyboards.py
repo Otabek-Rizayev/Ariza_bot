@@ -1,4 +1,4 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardRemove
 import loader
 from pathlib import Path
 from main import dp, bot, _
@@ -21,4 +21,4 @@ ish = ReplyKeyboardMarkup(resize_keyboard=True).add(ex, kur).add(biz, yur).add(b
 uz = InlineKeyboardButton(text="🇺🇿 O'zbekcha", callback_data="🇺🇿 O'zbekcha")
 ru = InlineKeyboardButton(text="🇷🇺 Русский", callback_data="🇷🇺 Русский")
 eng = InlineKeyboardButton(text="🇬🇧 English", callback_data="🇬🇧 English")
-til = InlineKeyboardMarkup(row_width=3, show_alert=True).add(uz, ru, eng)
+til = InlineKeyboardMarkup(row_width=3).add(uz, ru, eng)

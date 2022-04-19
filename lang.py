@@ -5,9 +5,9 @@ from typing import Tuple, Any
 
 LANG_STORAGE = {}  
 LANGS = {
+    "🇺🇿 O'zbekcha": "uz",
     "🇷🇺 Русский":"ru",
-    "🇬🇧 English": "en",
-    "🇺🇿 O'zbekcha": "uz"
+    "🇬🇧 English": "en"
     }
 
 class Localization(I18nMiddleware):
