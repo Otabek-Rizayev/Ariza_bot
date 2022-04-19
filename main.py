@@ -24,7 +24,7 @@ async def cmd_lang(message: types.Message, locale):
 
 @dp.message_handler(text="🇺🇿UZ|🇷🇺RU|🇬🇧ENG")
 async def send_welcome(message: types.Message):
-    await message.answer("🇺🇿 Тилни I танланг\n🇷🇺 Выберите язык\n🇬🇧Select a language", reply_markup=kb.til)
+    await message.answer("🇺🇿 Тилни танланг\n🇷🇺 Выберите язык\n🇬🇧Select a language", reply_markup=kb.til)
 
 @dp.callback_query_handler(text=["🇷🇺 Русский", "🇬🇧 English", "🇺🇿 O'zbekcha"])
 async def lang(query: types.CallbackQuery):
