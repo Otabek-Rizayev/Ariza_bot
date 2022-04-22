@@ -39,7 +39,7 @@ async def lang(query: types.CallbackQuery):
 @dp.message_handler(text=["👤 Биз ҳақимизда","👤 О нас", "👤 About us"])
 async def sahifa(message: types.Message):
     if message.text == "👤 Биз ҳақимизда":
-        await message.answer(lang_text[1], reply_markup=kb.mainmenu)
+        await message.answer(lang_text[0], reply_markup=kb.mainmenu)
     elif message.text == "👤 О нас":
         await message.answer(lang_text[5], reply_markup=kb.mainmenu)
     elif message.text == "👤 About us":
@@ -84,7 +84,7 @@ async def ish(msg: types.Message, state:FSMContext):
         await msg.answer(lang_text[11])
 
     if ish == "Кўргазма":
-        await msg.reply_photo("https://t.me/rasmlarpalata/33")
+        await msg.reply_photo("https://t.me/rasmlarpalata/56")
         await msg.answer(lang_text[2])
     elif ish == "Выставки":
         await msg.reply_photo("https://t.me/rasmlarpalata/42")
