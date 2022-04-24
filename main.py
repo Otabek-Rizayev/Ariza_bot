@@ -169,7 +169,7 @@ async def tel(msg: types.Message, state:FSMContext):
             f"<b>Фирма номи:</b> <code>{data['firma']}</code>\n"
             f"<b>Инн рақами:</b> <code>{data['inn']}</code>\n"
             f"<b>Телефон рақами:</b> <code>{data['tel']}</code>\n")
-    await bot.send_message(chat_id=-1001746692435, text=xabar)
+    await bot.send_message(chat_id=-1001616703745, text=xabar)
     await msg.answer(_("✅ Your application has been accepted and will be contacted shortly"), reply_markup=kb.mainmenu)
     await state.finish()
 
