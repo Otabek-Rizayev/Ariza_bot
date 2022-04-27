@@ -74,7 +74,7 @@ async def cancel_handler(message: types.Message, state: FSMContext):
 async def ish(msg: types.Message, state:FSMContext):
     ish=msg.text
     if ish == "Экспортга кўмаклашиш":
-        await msg.reply_photo("https://t.me/rasmlarpalata/31")
+        await msg.reply_photo("https://t.me/rasmlarpalata/56")
         await msg.answer(lang_text[1])
     elif ish == "Продвижение экспорта":
         await msg.reply_photo("https://t.me/rasmlarpalata/46")
