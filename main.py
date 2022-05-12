@@ -51,7 +51,7 @@ async def cancel_handler(message: types.Message, state: FSMContext):
 @dp.message_handler(state=Feedback.feed)
 async def end_feed(msg: types.Message, state=FSMContext):
     feed = msg.text
-    await bot.send_message(chat_id=123345, text=f"<b>{msg.from_user.full_name}:</b>\n<em>{feed}</em>")
+    await bot.send_message(chat_id=1166663829, text=f"<b>{msg.from_user.full_name}:</b>\n<em>{feed}</em>")
     await state.finish()
     await msg.answer(_("Fikr mulohazangiz uchun tashakkur!"), reply_markup=kb.mainmenu)
 
@@ -119,7 +119,7 @@ async def tel(msg: types.Message, state:FSMContext):
             f"<b>Ism, familyasi:</b>  <code>{data['ism']}</code>\n"
             f"<b>Oldingi ishlagan joyi:</b>  <code>{data['firma']}</code>\n"
             f"<b>Telefon raqami:</b>  <code>{data['tel']}</code>\n")
-    await bot.send_message(chat_id=123, text=xabar)
+    await bot.send_message(chat_id=-1001615759658, text=xabar)
     await msg.answer(_("✅ Arizangiz qabul qilindi. Tez orada aloqaga chiqiladi."), reply_markup=kb.mainmenu)
     await msg.reply("Arizangiz @Ariza_test kanaliga yuborildi!")
     await state.finish()
