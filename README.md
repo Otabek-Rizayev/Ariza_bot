@@ -1,1 +1,1 @@
-Ushbu bot orqali siz ariza qoldirishingiz mumkin. Ariza avtmatik kanalga yuboriladi.
+Ushbu bot orqali siz ariza qoldirishingiz mumkin. Ariza avtomatik kanalga yuboriladi.
