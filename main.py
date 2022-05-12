@@ -54,7 +54,6 @@ async def end_feed(msg: types.Message, state=FSMContext):
     await bot.send_message(chat_id=123345, text=f"<b>{msg.from_user.full_name}:</b>\n<em>{feed}</em>")
     await state.finish()
     await msg.answer(_("Fikr mulohazangiz uchun tashakkur!"), reply_markup=kb.mainmenu)
-    
 
 @dp.message_handler(text=_("👤 Biz haqimizda"))
 async def sahifa(message: types.Message):
@@ -106,7 +105,6 @@ async def firma_state(msg: types.Message, state:FSMContext):
 @dp.message_handler(lambda message: not len(message.text) == 13, state=Form.tel)
 async def tel_invalid(message: types.Message):
     return await message.reply(_("Telefon raqam noto'g'ri kiritildi!"))
-
 
 @dp.message_handler(lambda message: message.text, state=Form.tel)
 async def tel(msg: types.Message, state:FSMContext):
