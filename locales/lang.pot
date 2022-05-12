@@ -1,0 +1,111 @@
+# Translations template for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-05-12 13:17+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: keyboards.py:7 main.py:39 main.py:80
+msgid "🔙 Orqaga"
+msgstr ""
+
+#: keyboards.py:11 main.py:34
+msgid "💬 Adminga xabar qoldirish"
+msgstr ""
+
+#: keyboards.py:12 main.py:64
+msgid "📝 Ariza qoldirish"
+msgstr ""
+
+#: keyboards.py:13 main.py:59
+msgid "👤 Biz haqimizda"
+msgstr ""
+
+#: keyboards.py:17
+msgid "Meneger"
+msgstr ""
+
+#: keyboards.py:18
+msgid "Buxgalter"
+msgstr ""
+
+#: keyboards.py:19
+msgid "Injiner"
+msgstr ""
+
+#: keyboards.py:20
+msgid "Loyiha boshqaruvchisi"
+msgstr ""
+
+#: main.py:18
+msgid "Salom <b>{user}</b>"
+msgstr ""
+
+#: main.py:30
+msgid "Til o'zgardi ✅"
+msgstr ""
+
+#: main.py:32
+msgid "Boshlash uchun /start bosing"
+msgstr ""
+
+#: main.py:36
+msgid ""
+"Adminga o'z fikr mulohazalaringizni yuboring.\n"
+"Albatta iltimosingiz ko'rib chiqiladi!"
+msgstr ""
+
+#: main.py:49
+msgid "Bosh sahifa"
+msgstr ""
+
+#: main.py:56
+msgid "Fikr mulohazangiz uchun tashakkur!"
+msgstr ""
+
+#: main.py:66
+msgid "Ish turini tanlang:"
+msgstr ""
+
+#: main.py:71
+msgid "Knopkadan tanlang!"
+msgstr ""
+
+#: main.py:77
+msgid "Ism, familiyangizni kiriting:"
+msgstr ""
+
+#: main.py:90
+msgid "Ariza bekor qilindi!"
+msgstr ""
+
+#: main.py:96
+msgid "Oldingi ish-faoliyatingiz haqida qisqacha yozing:"
+msgstr ""
+
+#: main.py:103
+msgid ""
+"Telefon raqamingizni to'liq kiriting:\n"
+"Misol uchun: +9989********"
+msgstr ""
+
+#: main.py:108
+msgid "Telefon raqam noto'g'ri kiritildi!"
+msgstr ""
+
+#: main.py:125
+msgid "✅ Arizangiz qabul qilindi. Tez orada aloqaga chiqiladi."
+msgstr ""
+

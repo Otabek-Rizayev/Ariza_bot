@@ -4,11 +4,11 @@ import config
 from pathlib import Path
 from lang import Localization
 
-bot = Bot(token=config.BOT_TOKEN, parse_mode=types.ParseMode.HTML)
+bot = Bot(token=config.BOT_TOKEN, parse_mode=types.ParseMode.HTML)#
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 
-I18N_DOMAIN = "tkmbot"
+I18N_DOMAIN = "lang"
 BASE_DIR = Path(__file__).parent
 LOCALES_DIR = BASE_DIR / "locales"
 i18n = Localization(I18N_DOMAIN, LOCALES_DIR)

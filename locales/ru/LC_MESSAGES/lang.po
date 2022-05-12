@@ -1,0 +1,117 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-05-12 13:17+0500\n"
+"PO-Revision-Date: 2022-05-11 18:20+0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: keyboards.py:7 main.py:39 main.py:80
+msgid "🔙 Orqaga"
+msgstr "🔙 Назад"
+
+#: keyboards.py:11 main.py:34
+msgid "💬 Adminga xabar qoldirish"
+msgstr "💬 Оставьте сообщение администратору"
+
+#: keyboards.py:12 main.py:64
+msgid "📝 Ariza qoldirish"
+msgstr "📝 Оставьте заявку"
+
+#: keyboards.py:13 main.py:59
+msgid "👤 Biz haqimizda"
+msgstr "👤 О нас"
+
+#: keyboards.py:17
+msgid "Meneger"
+msgstr "Менеджер"
+
+#: keyboards.py:18
+msgid "Buxgalter"
+msgstr "Бухгалтер"
+
+#: keyboards.py:19
+msgid "Injiner"
+msgstr "Инженер"
+
+#: keyboards.py:20
+msgid "Loyiha boshqaruvchisi"
+msgstr "Руководитель проекта"
+
+#: main.py:18
+msgid "Salom <b>{user}</b>"
+msgstr "Здравствуйте <b>{user}</b>"
+
+#: main.py:30
+msgid "Til o'zgardi ✅"
+msgstr "Язык изменен ✅"
+
+#: main.py:32
+msgid "Boshlash uchun /start bosing"
+msgstr "Нажмите /start, чтобы начать"
+
+#: main.py:36
+msgid ""
+"Adminga o'z fikr mulohazalaringizni yuboring.\n"
+"Albatta iltimosingiz ko'rib chiqiladi!"
+msgstr ""
+"Отправить отзыв администратору.\n"
+"Конечно, ваша просьба будет рассмотрена!"
+
+#: main.py:49
+msgid "Bosh sahifa"
+msgstr "Домашняя страница"
+
+#: main.py:56
+msgid "Fikr mulohazangiz uchun tashakkur!"
+msgstr "Спасибо за ваш отзыв!"
+
+#: main.py:66
+msgid "Ish turini tanlang:"
+msgstr "Выберите тип работы:"
+
+#: main.py:71
+msgid "Knopkadan tanlang!"
+msgstr "Выберите с помощью кнопки"
+
+#: main.py:77
+msgid "Ism, familiyangizni kiriting:"
+msgstr "Введите свое имя и фамилию:"
+
+#: main.py:90
+msgid "Ariza bekor qilindi!"
+msgstr "Заявка отменена!"
+
+#: main.py:96
+msgid "Oldingi ish-faoliyatingiz haqida qisqacha yozing:"
+msgstr "Кратко опишите свою предыдущую работу:"
+
+#: main.py:103
+msgid ""
+"Telefon raqamingizni to'liq kiriting:\n"
+"Misol uchun: +9989********"
+msgstr ""
+"Введите свой полный номер телефона:\n"
+"Например: +9989 ********"
+
+#: main.py:108
+msgid "Telefon raqam noto'g'ri kiritildi!"
+msgstr "Номер телефона введен неверно!"
+
+#: main.py:125
+msgid "✅ Arizangiz qabul qilindi. Tez orada aloqaga chiqiladi."
+msgstr "✅ Ваша заявка принята. Скоро свяжемся."
+

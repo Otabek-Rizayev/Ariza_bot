@@ -1,4 +1,5 @@
 from aiogram import types
+from loader import dp, bot
 
 async def set_commands(dp):
     await dp.bot.send_my_commands(
